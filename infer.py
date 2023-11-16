@@ -38,7 +38,6 @@ for k, v in checkpoint['model'].items():
     name = k[7:] # remove `module.`
     new_state_dict[name] = v
 model.load_state_dict(new_state_dict)
-model.load_state_dict(check_point['model'])
 
 model.to(device)
 
