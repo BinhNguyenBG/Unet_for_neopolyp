@@ -1,8 +1,6 @@
 import os 
 import sys
 
-from torchsummary import summary
-from torchgeometry.losses import one_hot
 import pandas as pd
 import numpy as np
 from PIL import Image
