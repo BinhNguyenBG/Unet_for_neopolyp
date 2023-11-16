@@ -30,11 +30,11 @@ model = Unet(
     num_classes=3,            
 )
 
-model.to(device)
-
 # Load the pretrained model 
 check_point = torch.load('model.pth', map_location=device)
 model.load_state_dict(check_point['model'])
+
+model.to(device)
 
 
 # Transform for the test set
