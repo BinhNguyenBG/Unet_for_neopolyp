@@ -34,7 +34,7 @@ model = Unet(
 check_point = torch.load('model.pth')
 
 new_state_dict = OrderedDict()
-for k, v in checkpoint['model'].items():
+for k, v in check_point['model'].items():
     name = k[7:] # remove `module.`
     new_state_dict[name] = v
 model.load_state_dict(new_state_dict)
